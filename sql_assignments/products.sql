@@ -186,7 +186,7 @@ SELECT product_name , min(price) as cheap_products
 FROM products
 GROUP BY product_name
 ORDER BY cheap_products ASC
-LIMIT 4 OFFSET 3
+LIMIT 4 OFFSET --- THE END
 
 
 
