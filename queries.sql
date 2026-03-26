@@ -51,6 +51,10 @@ SELECT * FROM students;
 
 DROP TABLE students;
 
+use rocky;
+
+show tables
+
 
 
 
