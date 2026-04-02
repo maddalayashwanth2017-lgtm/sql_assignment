@@ -4,12 +4,12 @@ rev=0
 even=0
 odd=0
 for i in x:
-    rem = int(i)
+    # rem = int(i)
 
-    if rem%2==0:
-        even+=rem
+    if i%2==0:
+        even+=i
     else:
-        odd+=rem
+        odd+=i
    
 print(f"sum ofeven num are: {even}")
 print(f"sum ofeven num are: {odd}")
