@@ -18,6 +18,8 @@ CREATE TABLE Courses (
    trainer_name VARCHAR(50),
    mode VARCHAR(20), -- Online / Offline
    start_date DATE
+   
+
 );
 
 INSERT INTO Courses VALUES

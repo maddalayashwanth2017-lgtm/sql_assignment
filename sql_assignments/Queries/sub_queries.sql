@@ -80,4 +80,26 @@ WHERE salary>60000 AND department IN (
 -- 👉 Question:
 --  Find employees whose salary is greater than any employee in HR department.
 
+SELECT name,salary
+from empss
+WHERE salary > ANY  (
+    SELECT salary 
+    FROM empss
+    WHERE department= "it"
+)
 
+-- 👉 Question:
+--  Find employees whose salary is greater than all employees in Finance department.
+SELECT name,salary
+from empss
+WHERE salary > ALL (
+    SELECT salary 
+    FROM empss
+    WHERE department= "finanne"
+)
+
+SELECT department from empss
+where department = "finanane"
+    
+
+    

@@ -56,8 +56,10 @@ INSERT INTO employees VALUES
 -- ✅ 1
 -- 👉 Write a query to display all employees and their department names.
 
-SELECT emp_name,dept_name
-from departments
+SELECT emp_name,emp_id
+from employees;
+
+
 LEFT JOIN employees
 ON employees.dept_id=departments.dept_id
 
@@ -73,11 +75,11 @@ ON employees.dept_id=departments.dept_id
 -- ✅ 3
 -- 👉 Write a query to find employees who do not belong to any department.
 
-SELECT emp_name
-from departments
-LEFT JOIN employees
-ON employees.dept_id=departments.dept_id
-WHERE departments.dept_name is null
+SELECT emp_name,dept_name-
+from employees
+LEFT JOIN departments
+ON employees.dept_id=departments.dept_id 
+AND departments.dept_name is null;
 
 -- ✅ 4
 -- 👉 Write a query to display all departments and the number of employees in each department.
@@ -136,6 +138,3 @@ ORDER BY departments.dept_name
 -- a new column status
 -- "Assigned" if employee has a department
 -- "Not Assigned" if no department
-
-
-
